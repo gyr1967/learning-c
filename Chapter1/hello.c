@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int mainRedundant() {
     printf("Hello, World!\n");
     return 0;
 }
