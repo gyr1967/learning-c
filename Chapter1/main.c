@@ -44,7 +44,13 @@ void fahrToCelciusForLoop(){
     }
 }
 
+void verifyGetcharIsBool(){
+    printf("%d\n", getchar() != EOF);
+}
 
+void printEOF(){
+    printf("%d\n", EOF);
+}
 
 int main() {
     printf("Hello, World!\n");
@@ -54,6 +60,8 @@ int main() {
      */
     //fahrToCelciusHeader();
     //celciusToFahr();
-    fahrToCelciusForLoop();
+    //fahrToCelciusForLoop();
+    //verifyGetcharIsBool();
+    printEOF();
     return 0;
 }
