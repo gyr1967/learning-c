@@ -72,6 +72,22 @@ void countBlanksTabsNewlines(){
     printf("New Lines = %d , Tabs = %d , Blanks == %d", newLines, tabs, blanks);
 }
 
+void removeMultipleBlanks(){
+    int c, blankAlready;
+    blankAlready = 0;
+    while((c = getchar()) != EOF ){
+        if(c == ' '){
+            if (!blankAlready) {
+                blankAlready = 1;
+                putchar(c);
+            }
+        } else{
+            blankAlready = 0;
+                putchar(c);
+        }
+    }
+}
+
 int main() {
     printf("Hello, World!\n");
     /* function calls
@@ -83,6 +99,7 @@ int main() {
     //fahrToCelciusForLoop();
     //verifyGetcharIsBool();
     //printEOF();
-    countBlanksTabsNewlines();
+    //countBlanksTabsNewlines();
+    removeMultipleBlanks();
     return 0;
 }
