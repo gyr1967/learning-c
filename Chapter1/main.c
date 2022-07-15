@@ -52,6 +52,26 @@ void printEOF(){
     printf("%d\n", EOF);
 }
 
+void countBlanksTabsNewlines(){
+    // eof doesn't work in clion, only worked
+    // in online compiler for me
+    int c, newLines, tabs, blanks;
+    newLines = 0;
+    tabs = 0;
+    blanks = 0;
+
+    while ((c = getchar()) != EOF){
+        if (c == '\n'){
+            ++newLines;
+        } else if(c == '\t'){
+            ++tabs;
+        } else if(c == ' '){
+            ++blanks;
+        }
+    }
+    printf("New Lines = %d , Tabs = %d , Blanks == %d", newLines, tabs, blanks);
+}
+
 int main() {
     printf("Hello, World!\n");
     /* function calls
@@ -62,6 +82,7 @@ int main() {
     //celciusToFahr();
     //fahrToCelciusForLoop();
     //verifyGetcharIsBool();
-    printEOF();
+    //printEOF();
+    countBlanksTabsNewlines();
     return 0;
 }
