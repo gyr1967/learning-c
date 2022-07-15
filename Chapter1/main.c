@@ -88,6 +88,21 @@ void removeMultipleBlanks(){
     }
 }
 
+void replaceTabsBackspacesBackslashes(){
+    int c;
+    while((c = getchar()) != EOF ){
+        if(c == '\b'){
+            printf("\\b");
+        } else if(c == '\t'){
+            printf("\\t");
+        } else if(c == '\\'){
+            printf("\\\\");
+        } else{
+            printf("%c",c);
+        }
+    }
+}
+
 int main() {
     printf("Hello, World!\n");
     /* function calls
@@ -100,6 +115,7 @@ int main() {
     //verifyGetcharIsBool();
     //printEOF();
     //countBlanksTabsNewlines();
-    removeMultipleBlanks();
+    //removeMultipleBlanks();
+    replaceTabsBackspacesBackslashes();
     return 0;
 }
