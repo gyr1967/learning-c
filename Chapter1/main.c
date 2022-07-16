@@ -103,6 +103,17 @@ void replaceTabsBackspacesBackslashes(){
     }
 }
 
+void printInputWordPerLine(){
+    int c;
+    while ((c = getchar()) != EOF){
+        if (c == ' ' || c == '\n' || c == '\t'){
+            putchar('\n');
+        } else{
+            putchar(c);
+        }
+    }
+}
+
 int main() {
     printf("Hello, World!\n");
     /* function calls
@@ -116,6 +127,7 @@ int main() {
     //printEOF();
     //countBlanksTabsNewlines();
     //removeMultipleBlanks();
-    replaceTabsBackspacesBackslashes();
+    //replaceTabsBackspacesBackslashes();
+    printInputWordPerLine();
     return 0;
 }
