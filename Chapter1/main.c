@@ -114,6 +114,33 @@ void printInputWordPerLine(){
     }
 }
 
+void wordLengthHistogram(){
+    int c, inside_a_word, current_word_length;
+    int word_length_count[10];
+
+    c = current_word_length = 0;
+    inside_a_word = 1;
+    for (int i = 0; i < 10; ++i) {
+        word_length_count[i] = 0;
+    }
+    while((c = getchar()) != EOF){
+        if (c != ' ' && c != 10){
+            ++current_word_length;
+        } else{
+            ++word_length_count[current_word_length-1];
+            current_word_length = 0;
+        }
+    }
+    // horizontal histogram
+    for (int i = 0; i < 10; ++i) {
+        printf("\n %d", i + 1);
+        for (int j = 0; j < word_length_count[i]; ++j){
+            putchar('-');
+        }
+    }
+
+}
+
 int main() {
     printf("Hello, World!\n");
     /* function calls
@@ -128,6 +155,7 @@ int main() {
     //countBlanksTabsNewlines();
     //removeMultipleBlanks();
     //replaceTabsBackspacesBackslashes();
-    printInputWordPerLine();
+    //printInputWordPerLine();
+    wordLengthHistogram();
     return 0;
 }
