@@ -140,7 +140,24 @@ void wordLengthHistogram(){
 
 }
 
+void charFrequencyHistogram(){
+    int c;
+    int alphabet_char_freq[128];
 
+    for (int i = 0; i < 128; ++i) {
+        alphabet_char_freq[i] = 0;
+    }
+
+    while((c = getchar()) != EOF){
+        ++alphabet_char_freq[c];
+    }
+
+    for (int i = 0; i < 128; ++i) {
+        printf("\n %d", i);
+        for (int j = 0; j < alphabet_char_freq[i]; ++j){
+            putchar('-');
+        }
+    }
 }
 
 int main() {
@@ -158,6 +175,7 @@ int main() {
     //removeMultipleBlanks();
     //replaceTabsBackspacesBackslashes();
     //printInputWordPerLine();
-    wordLengthHistogram();
+    //wordLengthHistogram();
+    charFrequencyHistogram();
     return 0;
 }
