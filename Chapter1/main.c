@@ -115,11 +115,10 @@ void printInputWordPerLine(){
 }
 
 void wordLengthHistogram(){
-    int c, inside_a_word, current_word_length;
+    int c, current_word_length;
     int word_length_count[10];
 
     c = current_word_length = 0;
-    inside_a_word = 1;
     for (int i = 0; i < 10; ++i) {
         word_length_count[i] = 0;
     }
@@ -138,6 +137,9 @@ void wordLengthHistogram(){
             putchar('-');
         }
     }
+
+}
+
 
 }
 
