@@ -160,12 +160,13 @@ void charFrequencyHistogram(){
     }
 }
 
-int main() {
-    printf("Hello, World!\n");
-    /* function calls
+
+/*int main() {
+    //printf("Hello, World!\n");
+     function calls
      * ideally would have separate files to be called externally
      * but don't want to mess with auxiliary functions just yet
-     */
+
     //fahrToCelciusHeader();
     //celciusToFahr();
     //fahrToCelciusForLoop();
@@ -177,5 +178,5 @@ int main() {
     //printInputWordPerLine();
     //wordLengthHistogram();
     charFrequencyHistogram();
-    return 0;
-}
+    //return 0;
+}*/
