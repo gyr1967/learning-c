@@ -5,9 +5,9 @@
 int get_line(char line[], int maxline);
 
 /* print the longest input line */
-int main(void) {
-    int len; /* current line length */
-    char line[MAXLINE]; /* current input line */
+/*int main(void) {
+    int len; *//* current line length *//*
+    char line[MAXLINE]; *//* current input line *//*
 
     while ((len = get_line(line, MAXLINE)) > 0) {
         if (len > 1 && line[0] != '\n') {
@@ -15,7 +15,7 @@ int main(void) {
         }
     }
     return 0;
-}
+}*/
 
 
 /* get_line: read a line into s, return length */

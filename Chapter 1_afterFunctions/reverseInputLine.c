@@ -5,14 +5,14 @@
 int get_line(char line[], int maxline);
 void reverse(char string[]);
 /* print the longest input line */
-int main(void) {
-    char line[MAXLINE]; /* current input line */
 
+/*int main(void) {
+    char line[MAXLINE]; *//* current input line *//*
     while(get_line(line, MAXLINE) > 0){
         reverse(line);
     }
     return 0;
-}
+}*/
 
 
 /* get_line: read a line into s, return length */
